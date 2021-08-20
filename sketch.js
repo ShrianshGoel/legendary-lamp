@@ -3,7 +3,7 @@ var back, b
 var Ok,p
 var lo, load
 var rasen, rke=2;
-  }
+  
   if(GameState===2){
 Ok.visible=false;
     ball.visible=false;
