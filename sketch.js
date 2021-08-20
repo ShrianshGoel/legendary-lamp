@@ -15,8 +15,8 @@ function preload(){
   o1 = loadAnimation("156-1564984_pokeball-open-png-rendering.png");
   p = loadAnimation("play-button02.gif");
   rk = loadAnimation("1.gif");
-    img = loadImage('Screenshot 2021-08-20 10.52.36 AM.png');
- load=loadImage("cup.gif");
+    img = loadAnimation('Screenshot 2021-08-20 10.52.36 AM.png');
+ load=loadAnimation("cup.gif");
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -48,12 +48,15 @@ GameState = 2
   if(GameState===2){
 Ok.visible=false;
     ball.visible=false;
-image(img,width/5.7,height/3.70);
+    lo = createSprite(width/5.7,height/3.50,20,20)
+    lo.addAnimation("mn",img)
+    lo.lifetime = 200
+  
 if(keyDown("s")){
   GameState=3}
   }
   if(GameState===3){
-    lo = createSprite(width/9,height/9,20,20)
+    lo = createSprite(width/5,height/5,20,20)
     lo.addAnimation("man",load)
   
 }}
