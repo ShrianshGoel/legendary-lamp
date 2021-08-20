@@ -4,15 +4,11 @@ var Ok,p
 var lo, load
 var rasen, rke=2;
   
-  if(GameState===2){
-Ok.visible=false;
-    ball.visible=false;
-image(img,width/5.7,height/3.70);
-if(keyDown("s")){
-  GameState=3
+
 var ball, o1;
 var img
 var GameState=1;
+
 function preload(){
   im = loadAnimation("04901cb959ac94a94bcbd1b0dbb56cdc-min.gif");
   b = loadAnimation("wp4000364.jpg");
@@ -46,11 +42,18 @@ function draw() {
   drawSprites()
   
   if (mousePressedOver(Ok)){
-GameStat
+GameState = 2
 }
+  
+  if(GameState===2){
+Ok.visible=false;
+    ball.visible=false;
+image(img,width/5.7,height/3.70);
+if(keyDown("s")){
+  GameState=3}
   }
   if(GameState===3){
     lo = createSprite(width/9,height/9,20,20)
     lo.addAnimation("man",load)
-  }
-}
+  
+}}
